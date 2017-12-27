@@ -1,0 +1,219 @@
+body{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cedce7+0,596a72+100;Grey+3D+%231 */
+  background: #cedce7; /* Old browsers */
+  background: -moz-linear-gradient(top, #cedce7 0%, #596a72 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #cedce7 0%,#596a72 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #cedce7 0%,#596a72 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#596a72',GradientType=0 );
+}
+@mixin gradient($direction, $startColor, $endColor){
+  background: linear-gradient($direction, $startColor, $endColor);
+}
+
+@mixin gradientRadial($direction, $startColor, $endColor){
+  background: radial-gradient($startColor, $endColor);
+}
+
+#wrapper {
+  margin: 0 auto;
+  width: 960px;
+  padding: 0 10px;
+  border: 3px solid #4b4f54;
+  background-color: #fff;
+
+  section {
+    margin: 20px;
+    padding: 5px;
+    border: 3px solid #4b4f54;
+    header {
+      h1 {
+        text-decoration: solid;
+        text-align: center;
+        font-size: 16px;
+      }
+    }
+  }
+  article {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #4b4f54;
+  }
+  h2 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+  }
+  #first {
+    margin: 20px;
+    padding: 20px;
+    border: 3px solid #4b4f54;
+    h1 {
+      text-align: center;
+      font-weight: bold;
+      color: #4b4f54;
+      padding-bottom: 10px;
+    }
+    ul {
+      text-align: center;
+    }
+    a {
+      margin-left: 30px;
+      text-decoration: none;
+      padding: 10px 20px;
+      border: 2px solid #4b4f54;
+      &:hover {
+        @include gradient(to right, #cecece, #4b4f54)
+      }
+    }
+    li {
+      display: inline-block;
+    }
+  }
+  footer {
+    margin: 20px;
+    text-align: center;
+    padding: 10px;
+    border: 3px solid #4b4f54;
+    ul {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+    section {
+      &.linear {
+        article {
+          .innerContainer {
+            display: flex;
+            justify-content: center;
+
+            div {
+              border-radius: 25px;
+              width: 100px;
+              height: 100px;
+              display: flex;
+            }
+          }
+            &:nth-of-type(1) {
+              .purple {
+                @include gradient(to bottom, #24033a, #fff)
+              }
+
+              .blue {
+                @include gradient(to bottom, #0b42c1, #fff)
+              }
+
+              .green {
+                @include gradient(to bottom, #5ddd33, #fff)
+              }
+
+              .yellow {
+                @include gradient(to bottom, #ebef09, #fff)
+              }
+
+              .orange {
+                @include gradient(to bottom, #ef6809, #fff)
+              }
+
+              .red {
+                @include gradient(to bottom, #dd170d, #fff)
+              }
+            }
+            &:nth-of-type(2){
+              .purple {
+                @include gradient(to right, #24033a, #fff)
+              }
+
+              .blue {
+                @include gradient(to right, #0b42c1, #fff)
+              }
+
+              .green {
+                @include gradient(to right, #5ddd33, #fff)
+              }
+
+              .yellow {
+                @include gradient(to right, #ebef09, #fff)
+              }
+
+              .orange {
+                @include gradient(to right, #ef6809, #fff)
+              }
+
+              .red {
+                @include gradient(to right, #dd170d, #fff)
+              }
+            }
+
+            &:nth-of-type(3) {
+              .purple {
+                @include gradient(to bottom right, #24033a, #fff)
+              }
+
+              .blue {
+                @include gradient(to bottom right, #0b42c1, #fff)
+              }
+
+              .green {
+                @include gradient(to bottom right, #5ddd33, #fff)
+              }
+
+              .yellow {
+                @include gradient(to bottom right, #ebef09, #fff)
+              }
+
+              .orange {
+                @include gradient(to bottom right, #ef6809, #fff)
+              }
+
+              .red {
+                @include gradient(to bottom right, #dd170d, #fff)
+              }
+            }
+          }
+        }
+      }
+    }
+    section {
+      &.radial {
+        article {
+          .innerContainer {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+
+            div {
+              border-radius: 25px;
+              width: 100px;
+              height: 100px;
+              display: flex;
+            }
+
+            .purple {
+              @include gradientRadial(center, #24033a, #fff)
+            }
+
+            .blue {
+              @include gradientRadial(center, #0b42c1, #fff)
+            }
+
+            .green {
+              @include gradientRadial(center, #5ddd33, #fff)
+            }
+
+            .yellow {
+              @include gradientRadial(center, #ebef09, #fff)
+            }
+
+            .orange {
+              @include gradientRadial(center, #ef6809, #fff)
+            }
+
+            .red {
+              @include gradientRadial(center, #dd170d, #fff)
+            }
+          }
+        }
+      }
+    }

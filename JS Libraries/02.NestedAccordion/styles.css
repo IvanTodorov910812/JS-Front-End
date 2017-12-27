@@ -1,0 +1,36 @@
+div.wrapper {
+    display: grid;
+    width: 40%;
+    margin: 50px auto;
+    }
+
+h1, li,p {
+    color: #733838;
+!important;
+    }
+
+.btn {
+    color: white;
+    background: #733838;
+    margin: 5px;
+    }
+
+.btn:hover, .btn:focus {
+    color: white !important;
+    }
+
+ul {
+    margin-left: 20px;
+    }
+
+h1 {
+    text-align: center;
+    color: #733838 !important;
+    }
+button.inner{
+    margin-left: 40px !important;
+    }
+body > main > div > p{
+    margin-left: 60px !important;
+    }
+

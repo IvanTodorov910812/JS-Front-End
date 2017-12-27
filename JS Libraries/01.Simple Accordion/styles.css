@@ -1,0 +1,29 @@
+div.wrapper {
+    display: grid;
+    width: 40%;
+    margin: 50px auto;
+    }
+
+h1, li {
+    color: #733838;
+!important;
+    }
+
+button.btn {
+    color: white;
+    background: #733838;
+    margin: 5px;
+    }
+
+button.btn:hover, button.btn:focus {
+    color: white !important;
+    }
+
+ul {
+    margin-left: 20px;
+    }
+h1{
+    text-align: center;
+    color: #733838 !important;
+
+    }

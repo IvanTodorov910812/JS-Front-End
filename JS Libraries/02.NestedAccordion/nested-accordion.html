@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Nested Accordion</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+          crossorigin="anonymous">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
+          rel="stylesheet"
+          type='text/css'>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<main>
+    <div class=" wrapper">
+        <h1>A Simple Accordion</h1>
+        <button type="button" class="btn outer" data-toggle="collapse" data-target=".list-1">Item
+            1
+        </button>
+        <ul class="list-unstyled list-1 collapse">
+            <li>Option 1</li>
+            <li>Option 2</li>
+            <li>Option 3</li>
+        </ul>
+        <button type="button" class="btn outer" data-toggle="collapse" data-target=".list-2">Item
+            2
+        </button>
+        <ul class="list-unstyled list-2 collapse">
+            <li>Option 1</li>
+            <li>Option 2</li>
+            <li>Option 3</li>
+        </ul>
+        <button type="button" class="btn outer" data-toggle="collapse" data-target=".list-3">Item 3</button>
+        <ul class="list-unstyled list-3 collapse">
+            <button class="btn" data-target=".inner-p" data-toggle="collapse">Open Inner</button>
+            <li>
+                <p class="inner-p collapse mt-3 ml-3">Lore ipsum dolor sit amet, ..........</p>
+            </li>
+            <button class="btn">Open Inner #2</button>
+            <li>Option 3</li>
+        </ul>
+        <button type="button" class="btn outer" data-toggle="collapse" data-target=".list-4">Item
+            4</button>
+        <ul class="list-unstyled list-4 collapse">
+            <button class="btn" data-toggle="collapse" data-target=".inner-l">
+                Technically any number of nested elements
+            </button>
+            <li class="collapse inner-l">
+                <button class="btn ml-3" data-target=".smallest-child" data-toggle="collapse">Another nested
+                    element</button>
+                <p class="smallest-child collapse ml-5">As long as the inner element has inner as one of its
+                    classes
+                    then it will be toggled</p>
+            </li>
+            <li>Option 2</li>
+            <li>Option 3</li>
+        </ul>
+    </div>
+</main>
+</body>
+<script>
+    $( 'button.outer' ).click( function ( e ) {
+        $( 'ul.collapse').collapse( 'hide' );
+    } );
+</script>
+</html> 
